@@ -139,7 +139,8 @@ class App extends Component {
 
         //if collide with self
         if(this.isOnSnakeTail(newSnake.head.x, newSnake.head.y)){
-            alert(newSnake.head.x + "/" + newSnake.head.y +"Game Over");
+            const score = newSnake.tails.length+1;
+            alert("Game Over, Score =" + score);
             this.reset();
         }
         else{
